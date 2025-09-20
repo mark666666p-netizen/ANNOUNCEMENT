@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistech College - Class Announcement</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background: #f4f6f8;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #800000, #e60000); /* changed from blue to red gradient */
+            padding: 20px 40px;
+            color: white;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Main content */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .announcement-card {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Typhoon icon with subtle animation */
+        .typhoon-icon {
+            font-size: 6rem;
+            color: #e25822; /* A strong orange-red */
+            margin-bottom: 25px;
+            animation: subtleShake 2s ease-in-out infinite;
+            user-select: none;
+        }
+
+        @keyframes subtleShake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(4deg); }
+            50% { transform: rotate(-4deg); }
+            75% { transform: rotate(4deg); }
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 2.75rem;
+            margin-bottom: 20px;
+            color: #d4380d;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Emphasize date */
+        .date {
+            font-weight: 700;
+            color: #e60000; /* changed from #0073e6 blue to red */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px 20px;
+            background: #800000; /* changed from #004080 blue to dark red */
+            color: #fff;
+            font-size: 0.9rem;
+            font-family: 'Open Sans', sans-serif;
+            box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header {
+                font-size: 2rem;
+                padding: 15px 20px;
+            }
+            .announcement-card {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .typhoon-icon {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Sistech College
+    </header>
+
+    <main>
+        <div class="announcement-card" role="main" aria-label="Announcement about no classes due to typhoon">
+            <div class="typhoon-icon" aria-hidden="true">🌪️</div>
+            <h1>No Classes on <span class="date">September 22, 2025</span></h1>
+            <p>Due to the typhoon, there will be no classes conducted on September 22, 2025. Please prioritize your safety and follow official announcements for updates.</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> Sistech College. All rights reserved.
+    </footer>
+
+    <script>
+        // Automatically update year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
